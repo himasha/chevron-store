@@ -1,0 +1,67 @@
+<script>
+    var isSocial = ('{{features.social.enabled}}' == 'true');
+</script>
+
+{{#with assets}}
+
+        {{#with attributes}}
+
+
+                                <div class="widget-content">
+                                <div id ="chevron-canvas" style = "margin-left : 10px; margin-right :10px; padding-top:30px">
+                               <div id="canvasArea" style="height:600px;width:800px; border:solid 1px gray; overflow-y:scroll;  overflow-x: scroll;">
+                               </div>
+                                </div>
+                                 <div id = "ast-properties">
+                                    <div id="viewMainProps" name= "propTable" style="padding-bottom:10px; margin-left: 10px;">
+                            <hr width="800">
+                           
+                             <table id="htmlgrid" class="testgrid" >
+                                <tr>
+                                    <th>Properties</th>
+                                    <th>Value</th>
+                                    
+                                </tr>
+                                 <tr id="tr_name">
+                                    <td>Name</td>
+                                    <td id = "td_name" class="processName">{{overview_name}}</td>
+                                 
+                                </tr>
+                                
+                                <tr id="tr_owner">
+                                    <td>Owner</td>
+                                    <td id = "td_owner">{{properties_owner}}</td>
+                                   
+                                </tr>
+                                <tr id="R1">
+                                    <td>Predecessors</td>
+                                    <td id = "td_pre">{{properties_predecessors}}</td>
+                                   
+                                </tr>
+                                <tr id="R2">
+                                    <td>Successors</td>
+                                    <td id = "td_suc">{{properties_successors}}</td>
+                                   
+                                </tr>
+                             
+                                <tr id="R5">
+                                 <td>Description</td>
+                                    <td id = "td_desc">{{overview_description}}</td>
+                                </tr>
+                            </table>
+                          
+                          
+                       </div>
+                         <div>
+                       {{> view-element-properties .}}
+                       </div>
+
+                      
+                                 </div>       
+                                        
+                                </div>
+                           
+		                
+
+         {{/with}}
+    {{/with}}
